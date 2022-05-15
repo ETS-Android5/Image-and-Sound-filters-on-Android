@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#767f8c">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/progressBar"
+        android:src="@drawable/ic_launcher_background"
+        android:padding="5dp"
+
+        ></ImageView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_alignParentBottom="true"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dummyLayout"
+        android:visibility="invisible"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/recyclerView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/dummyLayout"
+        android:weightSum="3.0"
+        >
+
+        <Button
+        android:id="@+id/gallery"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:text="Load"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/custom_buttom"/>
+        <Button
+        android:id="@+id/saver"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:text="Save"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/custom_buttom"/>
+        <Button
+        android:id="@+id/apply"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:text="Change"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/custom_buttom"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
